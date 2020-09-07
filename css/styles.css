@@ -12,7 +12,11 @@ h2.header{
 }
 
 figure{
-	margin: 10px 5px;
+	margin: 20px 5px;
+}
+
+figure h2{
+	text-align: center;
 }
 
 p{
