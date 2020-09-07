@@ -1,0 +1,29 @@
+* {
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+html{
+	padding: 10px;
+}
+
+h2.header{
+	margin: 3px 0;
+}
+
+figure{
+	margin: 10px 5px;
+}
+
+p{
+	margin: 0;
+}
+
+ul{
+	padding-left: 15px;
+  margin-top: 10px;
+}
+
+ul li {
+	list-style-type: square;
+}
