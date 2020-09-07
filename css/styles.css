@@ -43,6 +43,10 @@ figure#gap ul li{
 	text-align: right;
 }
 
+section#webpack-one-liner ul li{
+	border: none;
+}
+
 p{
 	margin: 0;
 }
