@@ -65,3 +65,17 @@ a{
 .sub{
 	font-size: .8em;
 }
+
+
+code{
+	background-color: rgb(25,25,25);
+	color: rgb(225,225,255);
+	padding: 2px 5px;
+	font-size: .8em;
+}
+
+
+section#footnotes{
+	font-size: .8em;
+	font-style: italic;
+}
