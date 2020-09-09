@@ -74,6 +74,10 @@ code{
 	font-size: .8em;
 }
 
+code.error{
+	color: red;
+}
+
 
 section#footnotes{
 	font-size: .8em;
