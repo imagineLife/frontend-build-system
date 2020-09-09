@@ -40,14 +40,15 @@
     <p>Here, we will levearge some of webpacks default config settings to serve an index.thml && index.js file in a local development environment.</p>
 
     <section id="npm init">
-      <h4>Setup the project directory</h4>
-      <p><b>Create a repo, a folder on your desktop.</b></p>
-      <p class="sub">Maybe call it 'frontend-boilerplate'. This will be the folder that will hold the boilerplate.</p>
+      <h4>Prepare a start script</h4>
+      <p>Here, a single webpack-dev-server command will exist as a "wds" script. We 'compose' that script into a start script by running or 'calling' the 'wds' script inside the 'start' script.</p>
+      <p>Inside the package.json file, inside the "scripts" object, add 2 new key-value pairs...</p>
+      <code>"wds": "webpack-dev-server",<br>
+      "start": "npm run wds"</code>
 
-      <h4>NPM init</h4>
-      <p><b>Open a terminal, cd in to the newly created repo.</b></p>
-      <p><b><a href="#npm-init">**</a>Run <code>npm init -y</code></b></p>
-      <p class="sub">This 'sets up' the repo to leverage npm for the following steps. Now, there will be a package.json file, which acts as the 'config' for npm to know what to do with dependencies, and what files to work with.</p>
+      <h4>TEST IT!</h4>
+      <p>Open A terminal if one is not open. cd into the project directory if the terminal is not already. Run...</p>
+      <code>npm start</code>
 
       <h4>Install some dependencies</h4>
       <ul>
