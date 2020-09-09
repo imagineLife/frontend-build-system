@@ -42,9 +42,11 @@
     <section id="npm init">
       <h4>Prepare a start script</h4>
       <p>Here, a single webpack-dev-server command will exist as a "wds" script. We 'compose' that script into a start script by running or 'calling' the 'wds' script inside the 'start' script.</p>
-      <p>Inside the package.json file, inside the "scripts" object, add 2 new key-value pairs...</p>
-      <code>"wds": "webpack-dev-server",<br>
-      "start": "npm run wds"</code>
+      <p>Inside the package.json file, inside the "scripts" object, add 2 new key-value pairs. The scripts section of the package.json should show...</p>
+      <code>"scripts": {<br>
+      &#160&#160"wds": "webpack-dev-server",<br>
+      &#160&#160"start": "npm run wds"<br>
+      }</code>
 
       <h4>TEST IT!</h4>
       <p>Open A terminal if one is not open. cd into the project directory if the terminal is not already. Run...</p>
