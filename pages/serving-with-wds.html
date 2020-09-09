@@ -1,0 +1,83 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Frontent Build System</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="./../css/normalize.css">
+  <link rel="stylesheet" href="./../css/main.css">
+  <link rel="stylesheet" href="./../css/styles.css">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <header>
+    <h1>Serving with Webpack Dev Server </h1>
+  </header>
+
+  <figure id="gap">
+    <h2 class="header" id="gap-header">The Gap</h2>
+    <ul>
+      <li>"I know which webpack dependencies I need, but I don't know how to use webpack-dev-server to serve an app."</li>
+    </ul>
+  </figure>  
+
+  <figure id="hope">
+    <h2 class="header" id="hope-header">The Hope</h2>
+    <p>As a developr, I'd like to...
+      <ul>
+        <li>... leverage webpack-dev-server to serve some html && js for my project.</li>
+      </ul>
+  </figure>
+
+  
+  <figure id="one-liners">
+    <h2 class="header" id="practice-header">The Practice</h2>
+    <h3>Project Initialization</h3>
+    <p>Here, we will leverage npm to initialize a project and install a handful of dependencies. This will not be all dependencies, just enough needed to get the project started and serving some content.</p>
+
+    <section id="npm init">
+      <h4>Setup the project directory</h4>
+      <p><b>Create a repo, a folder on your desktop.</b></p>
+      <p class="sub">Maybe call it 'frontend-boilerplate'. This will be the folder that will hold the boilerplate.</p>
+
+      <h4>NPM init</h4>
+      <p><b>Open a terminal, cd in to the newly created repo.</b></p>
+      <p><b><a href="#npm-init">**</a>Run <code>npm init -y</code></b></p>
+      <p class="sub">This 'sets up' the repo to leverage npm for the following steps. Now, there will be a package.json file, which acts as the 'config' for npm to know what to do with dependencies, and what files to work with.</p>
+
+      <h4>Install some dependencies</h4>
+      <ul>
+        <li>webpack</li>
+        <li>webpack-cli</li>
+        <li>webpack-dev-server</li>
+      </ul>
+      <p class="sub">These can be installed using <code>npm install --save-dev webpack webpack-dev-server webpack-cli</code>. This 'sets up' the repo to leverage npm for the following steps.</p>
+      <p class="sub">Here, webpack dependencies are installed, ready to 'consume' some javascript, reaady to serve in a dev server, and even ready to 'build' into code that is 'ready for production'.</p>
+      <p class="sub">Now, the "devDependencies" section of the package.json should look something like...
+  <code><br>
+    "devDependencies": {<br>
+      &#160&#160"webpack": "^4.44.1",<br>
+      &#160&#160"webpack-cli": "^3.3.12",<br>
+      &#160&#160"webpack-dev-server": "^3.11.0"<br>
+  }</code>
+</pre>
+      </p>
+    </section>
+
+  </figure>
+
+  <section id="footnotes">
+    <p id="npm-init">** You need Node installed on your machine. I'm assuming Node is already installed on your machine. The <code>-y</code> flag tells npm to skip asking you a few questions.</p>
+  </section>
+
+  <p><a href="./serving-with-wds.html">Serve an html file with a javascript file in a dev server </a>next -></p>
+
+  <script src="./../js/main.js"></script>
+</body>
+
+</html>
