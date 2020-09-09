@@ -42,7 +42,7 @@
     <section id="npm init">
       <h4>Prepare a start script</h4>
       <p>Here, a single webpack-dev-server command will exist as a "wds" script. We 'compose' that script into a start script by running or 'calling' the 'wds' script inside the 'start' script.</p>
-      <p>Inside the package.json file, inside the "scripts" object, add 2 new key-value pairs. The scripts section of the package.json should show...</p>
+      <p>Inside the package.json file, inside the "scripts" object, add 2 new key-value pairs. The scripts section of the package.json should showain...</p>
       <code>"scripts": {<br>
       &#160&#160"wds": "webpack-dev-server",<br>
       &#160&#160"start": "npm run wds"<br>
@@ -51,6 +51,10 @@
       <h4>TEST IT!</h4>
       <p>Open A terminal if one is not open. cd into the project directory if the terminal is not already. Run...</p>
       <code>npm start</code>
+
+      <h4>SEE THE PROGRESS</h4>
+      <p>The cli will output a handful of lines. an <b>ERROR</b> will be one of them...</p>
+      <code class="error">ERROR in Entry module not found: Error: Can't resolve './src' in ...</code>
 
       <h4>Install some dependencies</h4>
       <ul>
