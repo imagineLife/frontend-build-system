@@ -51,34 +51,23 @@
       <h4>TEST IT!</h4>
       <p>Open A terminal if one is not open. cd into the project directory if the terminal is not already. Run...</p>
       <code>npm start</code>
+    </section>
 
+    <section id="progress">
       <h4>SEE THE PROGRESS</h4>
       <p>The cli will output a handful of lines. an <b>ERROR</b> will be one of them...</p>
       <code class="error">ERROR in Entry module not found: Error: Can't resolve './src' in ...</code>
+    </section>
 
-      <h4>Install some dependencies</h4>
-      <ul>
-        <li>webpack</li>
-        <li>webpack-cli</li>
-        <li>webpack-dev-server</li>
-      </ul>
-      <p class="sub">These can be installed using <code>npm install --save-dev webpack webpack-dev-server webpack-cli</code>. This 'sets up' the repo to leverage npm for the following steps.</p>
-      <p class="sub">Here, webpack dependencies are installed, ready to 'consume' some javascript, reaady to serve in a dev server, and even ready to 'build' into code that is 'ready for production'.</p>
-      <p class="sub">Now, the "devDependencies" section of the package.json should look something like...
-  <code><br>
-    "devDependencies": {<br>
-      &#160&#160"webpack": "^4.44.1",<br>
-      &#160&#160"webpack-cli": "^3.3.12",<br>
-      &#160&#160"webpack-dev-server": "^3.11.0"<br>
-  }</code>
-</pre>
-      </p>
+    <section id="debug-and-fix">
+      <h4>DEBUG AND FIX</h4>
+      <p>A glance into the <a href="https://webpack.js.org/configuration/" target="_blank">webpack configuration docs</a> shows that "...(<i>webpack</i>) will assume the entry point of your project is <code>src/index.js</code>". This means a src folder && a file inside that folder, index.js, need to be present for webpack to work 'out-of-the-box'.</p>
+
     </section>
 
   </figure>
 
   <section id="footnotes">
-    <p id="npm-init">** You need Node installed on your machine. I'm assuming Node is already installed on your machine. The <code>-y</code> flag tells npm to skip asking you a few questions.</p>
   </section>
 
   <p><a href="./serving-with-wds.html">Serve some content in the dev server </a>next -></p>
