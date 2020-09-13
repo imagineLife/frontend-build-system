@@ -16,13 +16,13 @@
 <body>
 
   <header>
-    <h1>Serving with Webpack Dev Server </h1>
+    <h1>Setting Up a Webpack Config</h1>
   </header>
 
   <figure id="gap">
     <h2 class="header" id="gap-header">The Gap</h2>
     <ul>
-      <li>"I know some of the webpack dependencies I need, but I don't know how to use webpack-dev-server to serve an app."</li>
+      <li>"I have a few dependencies installed, but "</li>
     </ul>
   </figure>  
 
@@ -55,20 +55,8 @@
 
     <section id="progress">
       <h4>SEE THE PROGRESS</h4>
-      <p>The cli will output a handful of lines. an <b>ERROR</b> will be one of them...</p>
-      <code class="error">ERROR in Entry module not found: Error: Can't resolve './src' in ...</code>
-    </section>
-
-    <section id="debug-and-fix">
-      <h4>DEBUG AND FIX</h4>
-      <h5>Review the Webpack Docs</h5>
-      <p>A glance into the <a href="https://webpack.js.org/configuration/" target="_blank">webpack configuration docs</a> shows that "...(<i>webpack</i>) will assume the entry point of your project is <code>src/index.js</code>". This means a src folder && a file inside that folder, index.js, need to be present for webpack to work 'out-of-the-box'.</p>
-      <h5>Add the expected content</h5>
-      <p>Add a <code>src</code> file to the project. Add an <code>index.js</code> file inside the src file. Here, I added a <code>console.log('log from index.js') to test that the log shows in the dev tools.</code></p>
-      <h4>TEST IT!</h4>
-      <p>Open A terminal if one is not open. cd into the project directory if the terminal is not already. Run...</p>
-      <code>npm start</code>
-      <p>Here, the project is served at <code>localhost:8080</code>. When I point my browser to that url, I see "listing directory /". Getting webpack to serve content is not completely setup yet. An index.html page needs to be setup, and a webpack.config file needs to be added to include some configuraion details about our project.</p>
+      <p>The terminal will output a bunch of lines. One of the lines notes... <br>
+      <code><code class="blue">ℹ ｢wds｣:</code> Project is running at <code class="blue">http://localhost:your-port-here</code></code>
     </section>
 
     <section id="add-html">
