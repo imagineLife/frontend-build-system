@@ -83,3 +83,7 @@ section#footnotes{
 	font-size: .8em;
 	font-style: italic;
 }
+
+code.blue{
+	color: rgb(120,120,255);
+}
