@@ -55,24 +55,15 @@
 
     <section id="progress">
       <h4>SEE THE PROGRESS</h4>
-      <p>The terminal will output a bunch of lines. One of the lines notes... <br>
-      <code><code class="blue">ℹ ｢wds｣:</code> Project is running at <code class="blue">http://localhost:your-port-here</code></code>
-    </section>
-
-    <section id="add-html">
-      <h4>INCLUDE AN HTML FILE</h4>
-      <p>As the <a href="https://webpack.js.org/configuration/dev-server/#devserver" target="_blank">webpack-dev-server docs</a> specifically express, "HTML template is required to serve the bundle, usually it is an index.html file". Here we will leverage <a href="https://webpack.js.org/plugins/html-webpack-plugin/" taret="_blank">HtmlWebpackPlugin</a> for "... (simplifying) creation of HTML files to serve (our) webpack (bundle)".</p>
-      <li>Install html-webpack plugin by using <code>npm install --save-dev html-webpack-plugin</code></li>
-
-      <li>Leverage <a href="https://github.com/jantimon/html-webpack-plugin#writing-your-own-templates" target="_blank">using our own template</a> by</li>
+      <p>The terminal will output a handful of lines. One of the lines notes... <br>
+      <code><code class="blue">ℹ ｢wds｣:</code> Project is running at <code class="blue">http://localhost:your-port-here</code></code><br>
+      Navigating to the url in chrome, though, reveals a file directory... not a webpage. <br>
+      Lets setup a webpack config file, leverage html-webpack-plugin, and get our index.html page to render from the expected url.
     </section>
 
   </figure>
 
-  <section id="footnotes">
-  </section>
-
-  <p><a href="./serving-with-wds.html">Serve some content in the dev server </a>next -></p>
+  <p><a href="./webpack-config.html">Begin a webpack config</a>next -></p>
 
   <script src="./../js/main.js"></script>
 </body>

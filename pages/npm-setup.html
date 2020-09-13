@@ -61,18 +61,38 @@
       <p class="sub">These can be installed using <code>npm install --save-dev webpack webpack-dev-server webpack-cli html-webpack-plugin</code>. This 'sets up' the repo to leverage npm for the following steps.</p>
       <p class="sub">Here, webpack dependencies are installed, ready to 'consume' some javascript, reaady to serve in a dev server, and even ready to 'build' into code that is 'ready for production'.</p>
       <p class="sub">Now, the "devDependencies" section of the package.json should look something like...<br>
-  <code>
-    "devDependencies": {<br>
-      &#160&#160"webpack": "^4.44.1",<br>
-      &#160&#160"webpack-cli": "^3.3.12",<br>
-      &#160&#160"webpack-dev-server": "^3.11.0"<br>
-      &#160&#160"html-webpack-plugin": "^4.4.1"<br>
-  }</code>
-</pre>
+        <code>
+          "devDependencies": {<br>
+            &#160&#160"webpack": "^4.44.1",<br>
+            &#160&#160"webpack-cli": "^3.3.12",<br>
+            &#160&#160"webpack-dev-server": "^3.11.0"<br>
+            &#160&#160"html-webpack-plugin": "^4.4.1"<br>
+        }</code>
       </p>
     </section>
 
-  </figure>
+    <section id="npm init">
+      <h4>Prepare a start script</h4>
+      <p>Here, we will levearge some of webpacks default config settings to serve an index.thml && index.js file in a local development environment. Webpack's <a href="https://v4.webpack.js.org/guides/getting-started/" target="_blank">Getting Started Docs</a> are a great place to look into for a quick run-through on setting up a project with webpack.</p>
+      <p>Here, a single webpack-dev-server command will exist as a "wds" script. We 'compose' that script into a start script by running or 'calling' the 'wds' script inside the 'start' script.</p>
+      <p>Inside the package.json file, inside the "scripts" object, add 2 new key-value pairs. The scripts section of the package.json should showain...</p>
+      <code>"scripts": {<br>
+      &#160&#160"wds": "webpack-dev-server",<br>
+      &#160&#160"start": "npm run wds"<br>
+      }</code>
+
+      <h4>TEST IT!</h4>
+      <p>Open A terminal if one is not open. cd into the project directory if the terminal is not already. Run...</p>
+      <code>npm start</code>
+    </section>
+
+    <section id="progress">
+      <h4>SEE THE PROGRESS</h4>
+      <p>The terminal will output a handful of lines. One of the lines notes... <br>
+      <code><code class="blue">ℹ ｢wds｣:</code> Project is running at <code class="blue">http://localhost:your-port-here</code></code><br>
+      Navigating to the url in chrome, though, reveals a file directory... not a webpage. <br>
+      Lets setup a webpack config file, leverage html-webpack-plugin, and get our index.html page to render from the expected url.
+    </section>
 
   <section id="footnotes">
     <p id="npm-init">** You need Node installed on your machine. I'm assuming Node is already installed on your machine. The <code>-y</code> flag tells npm to skip asking you a few questions.</p>
