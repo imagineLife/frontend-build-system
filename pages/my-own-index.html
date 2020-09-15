@@ -1,0 +1,69 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Frontent Build System</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="./../css/normalize.css">
+  <link rel="stylesheet" href="./../css/main.css">
+  <link rel="stylesheet" href="./../css/styles.css">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <header>
+    <h1>Serving My Own Index File</h1>
+  </header>
+
+  <figure id="gap">
+    <h2 class="header" id="gap-header">The Gap</h2>
+    <ul>
+      <li>"I can serve the default index.html file provied by webpack, but I want to serve my own file."</li>
+    </ul>
+  </figure>  
+
+  <figure id="hope">
+    <h2 class="header" id="hope-header">The Hope</h2>
+    <p>As a developr, I'd like to...
+      <ul>
+        <li>... leverage html-webpack-plugin to serve my own index.html file.</li>
+      </ul>
+  </figure>
+
+  
+  <figure id="one-liners">
+    <h2 class="header" id="practice-header">The Practice</h2>
+  </figure>
+
+  <section id="add-html">
+    <h4>Update the html-webpack-plugin</h4>
+    <p>To serve a custom html file, the html-webpack-plugin needs some details.</p>
+    <li>Import html-webpack-plugin at the top of the file && save it to a variable. I'm calling this <b>HtmlWPPlugin</b></li>
+    <li>Setup the file to export an object.</li>
+    <li>In the object, create a <b>plugins</b> key.</li>
+    <li>Set the value of the <b>plugins key</b> to be an array.</li>
+    <li>In the plugins array value, set an element in the array to be <b>new HtmlWPPlugin()</b>.</li>
+    <p>The config file should look something like...</p>
+    <code>
+    const HtmlWPPlugin = require('html-webpack-plugin');<br>
+      module.exports = {<br>
+        &#160&#160plugins: [new HtmlWPPlugin()]<br>
+      };<br>
+    </code>
+
+    <h4>TEST IT!</h4>
+    <p>Open A terminal if one is not open. cd into the project directory if the terminal is not already. Run...</p>
+    <code>npm start</code>
+    <p>Here, an index.html that is auto-generate by Webpack-dev-server is displayed! The title of the page 'Webpack App' is a giveaway that the ui is auto-generated.</p>
+  </section>
+
+  <p><a href="./my-own-index.html">Serve your own index file</a> next -></p>
+
+  <script src="./../js/main.js"></script>
+</body>
+
+</html>
