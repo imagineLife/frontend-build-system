@@ -42,17 +42,20 @@
   <section id="add-html">
     <h4>Update the html-webpack-plugin</h4>
     <p>To serve a custom html file, the html-webpack-plugin needs some details.</p>
-    <li>Import html-webpack-plugin at the top of the file && save it to a variable. I'm calling this <b>HtmlWPPlugin</b></li>
-    <li>Setup the file to export an object.</li>
-    <li>In the object, create a <b>plugins</b> key.</li>
-    <li>Set the value of the <b>plugins key</b> to be an array.</li>
-    <li>In the plugins array value, set an element in the array to be <b>new HtmlWPPlugin()</b>.</li>
+    <li>Add an object to the parenthesis of the HtmlWPPlugin in the webpack.config.js</li>
+    <li>give the newly created object a key of <b>template</b> with a value of <b>"./src/index.html"</b></li>
+    <li>give the newly created object another key of <b>filename</b> with a value of <b>"./index.html"</b></li>
     <p>The config file should look something like...</p>
     <code>
     const HtmlWPPlugin = require('html-webpack-plugin');<br>
-      module.exports = {<br>
-        &#160&#160plugins: [new HtmlWPPlugin()]<br>
-      };<br>
+    module.exports = {<br>
+    &#160&#160plugins: [<br>
+    &#160&#160&#160&#160new HtmlWPPlugin({<br>
+    &#160&#160&#160&#160&#160&#160template: "./src/index.html",<br>
+    &#160&#160&#160&#160&#160&#160filename: "./index.html"<br>
+    &#160&#160&#160&#160})<br>
+    &#160]<br>
+    };
     </code>
 
     <h4>TEST IT!</h4>
