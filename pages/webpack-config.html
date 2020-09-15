@@ -39,6 +39,27 @@
     <h2 class="header" id="practice-header">The Practice</h2>
   </figure>
 
+  <section id="add-html">
+    <h4>Initialize a webpack config</h4>
+    <p>As the <a href="https://webpack.js.org/configuration/dev-server/#devserver" target="_blank">webpack-dev-server docs</a> specifically express, "HTML template is required to serve the bundle, usually it is an index.html file". Here we will leverage <a href="https://webpack.js.org/plugins/html-webpack-plugin/" taret="_blank">HtmlWebpackPlugin</a> for "... (simplifying) creation of HTML files to serve (our) webpack (bundle)".</p>
+    <li>Create a webpack.config.js file</li>
+    <li>Import html-webpack-plugin at the top of the file && save it to a variable. I'm calling this <b>HtmlWPPlugin</b></li>
+    <li>Setup the file to export an object.</li>
+    <li>In the object, create a <b>plugins</b> key.</li>
+    <li>Set the value of the <b>plugins key</b> to be an array.</li>
+    <li>In the plugins array value, set an element in the array to be <b>new HtmlWPPlugin()</b>.</li>
+    <p>The config file should look something like...</p>
+    <code>
+    const HtmlWPPlugin = require('html-webpack-plugin');<br>
+      module.exports = {<br>
+        &#160&#160plugins: [new HtmlWPPlugin()]<br>
+      };<br>
+    </code>
+
+
+    <li>Leverage <a href="https://github.com/jantimon/html-webpack-plugin#writing-your-own-templates" target="_blank">using our own template</a> by</li>
+  </section>
+
   <p><a href="./webpack-config.html">Begin a webpack config</a>next -></p>
 
   <script src="./../js/main.js"></script>
