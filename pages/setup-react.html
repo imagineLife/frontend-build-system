@@ -1,0 +1,80 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Frontent Build System</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="./../css/normalize.css">
+  <link rel="stylesheet" href="./../css/main.css">
+  <link rel="stylesheet" href="./../css/styles.css">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <header>
+    <h1>Serving My Own Index File</h1>
+  </header>
+
+  <figure id="gap">
+    <h2 class="header" id="gap-header">The Gap</h2>
+    <ul>
+      <li>"I can serve the default index.html file provied by webpack-dev-server, but I want to serve my own file."</li>
+    </ul>
+  </figure>  
+
+  <figure id="hope">
+    <h2 class="header" id="hope-header">The Hope</h2>
+    <p>As a developr, I'd like to...
+      <ul>
+        <li>... leverage html-webpack-plugin to serve my own index.html file.</li>
+      </ul>
+  </figure>
+
+  
+  <figure id="one-liners">
+    <h2 class="header" id="practice-header">The Practice</h2>
+  </figure>
+
+  <section id="add-html">
+    <h4>Update the html-webpack-plugin</h4>
+    <p>To serve a custom html file, the html-webpack-plugin needs some details.</p>
+    <li>Add an object to the parenthesis of the HtmlWPPlugin in the webpack.config.js</li>
+    <li>give the newly created object a key of <b>template</b> with a value of <b>"./src/index.html"</b></li>
+    <li>give the newly created object another key of <b>filename</b> with a value of <b>"./index.html"</b></li>
+    <p>The config file should look something like...</p>
+    <code>
+    const HtmlWPPlugin = require('html-webpack-plugin');<br>
+    module.exports = {<br>
+    &#160&#160plugins: [<br>
+    &#160&#160&#160&#160new HtmlWPPlugin({<br>
+    &#160&#160&#160&#160&#160&#160template: "./src/index.html"<br>
+    &#160&#160&#160&#160})<br>
+    &#160]<br>
+    };
+    </code>
+
+    <h4>What's it do</h4>
+    <p>According to the <a href="https://github.com/jantimon/html-webpack-plugin#options" target="_blank">html-webpack-plugin docs</a>...</p>
+    <li><code>template</code> gives this plugin the path to the template. Our template, our bespoke index.html file, will sit be located at <code>./src/index.html</code></li>
+
+    <h4>Create an index.html file</h4>
+    <p>Make one && store it in the src directory.</p>
+    <li>Give it a recognizable document title</li>
+    <li>Include in the body a div with an id of "app"</li>
+
+    <h4>TEST IT!</h4>
+    <p>Open A terminal if one is not open. cd into the project directory if the terminal is not already. Run...</p>
+    <code>npm start</code>
+    <p>Here, our hand-written index file is now served.</p>
+  </section>
+
+  <p><a href="./setup-react.html">Connect React && serve a component</a> next -></p>
+
+  <script src="./../js/main.js"></script>
+</body>
+
+</html>
