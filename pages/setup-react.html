@@ -16,13 +16,13 @@
 <body>
 
   <header>
-    <h1>Serving My Own Index File</h1>
+    <h1>Including React</h1>
   </header>
 
   <figure id="gap">
     <h2 class="header" id="gap-header">The Gap</h2>
     <ul>
-      <li>"I can serve the default index.html file provied by webpack-dev-server, but I want to serve my own file."</li>
+      <li>"I can serve an index.html using webpack-dev-server, but I don't know how to include react in a front-end build system."</li>
     </ul>
   </figure>  
 
@@ -30,7 +30,7 @@
     <h2 class="header" id="hope-header">The Hope</h2>
     <p>As a developr, I'd like to...
       <ul>
-        <li>... leverage html-webpack-plugin to serve my own index.html file.</li>
+        <li>... have a frontend build boilerplate that includes react.</li>
       </ul>
   </figure>
 
@@ -40,31 +40,25 @@
   </figure>
 
   <section id="add-html">
-    <h4>Update the html-webpack-plugin</h4>
-    <p>To serve a custom html file, the html-webpack-plugin needs some details.</p>
-    <li>Add an object to the parenthesis of the HtmlWPPlugin in the webpack.config.js</li>
-    <li>give the newly created object a key of <b>template</b> with a value of <b>"./src/index.html"</b></li>
-    <li>give the newly created object another key of <b>filename</b> with a value of <b>"./index.html"</b></li>
-    <p>The config file should look something like...</p>
+    <h4>Install react dependencies</h4>
+    <p>run <code>npm i react react-dom</code></p>
+    <p>The package.json dependencies should look something like...</p>
     <code>
-    const HtmlWPPlugin = require('html-webpack-plugin');<br>
-    module.exports = {<br>
-    &#160&#160plugins: [<br>
-    &#160&#160&#160&#160new HtmlWPPlugin({<br>
-    &#160&#160&#160&#160&#160&#160template: "./src/index.html"<br>
-    &#160&#160&#160&#160})<br>
-    &#160]<br>
-    };
+    "dependencies": {<br>
+    &#160&#160"react": "^16.13.1",<br>
+    &#160&#160"react-dom": "^16.13.1"<br>
+    }
     </code>
 
-    <h4>What's it do</h4>
-    <p>According to the <a href="https://github.com/jantimon/html-webpack-plugin#options" target="_blank">html-webpack-plugin docs</a>...</p>
-    <li><code>template</code> gives this plugin the path to the template. Our template, our bespoke index.html file, will sit be located at <code>./src/index.html</code></li>
-
-    <h4>Create an index.html file</h4>
-    <p>Make one && store it in the src directory.</p>
-    <li>Give it a recognizable document title</li>
-    <li>Include in the body a div with an id of "app"</li>
+    <h4>Build an index.js && include a react component</h4>
+    <li>make a new file in the src directory, index.js</li>
+    <li>in the index.js, introduce some javascript that renders a react component to the <code>#app</code> div in the index.html. This page will not go into details about creating a react component. The index.js file could look something like...</li>
+    <pre>
+  "import React from "react"
+  import ReactDOM from "react-dom"
+  const Component = ({txt}) => &lt;h2&gt;{txt}&lt;/h2&gt;
+  ReactDOM.render(&lt;Component txt="Here's my component, even including a prop!"/&gt;, document.getElementById("app"));
+    </pre>
 
     <h4>TEST IT!</h4>
     <p>Open A terminal if one is not open. cd into the project directory if the terminal is not already. Run...</p>
