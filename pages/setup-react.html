@@ -73,6 +73,36 @@ You may need an appropriate loader to handle this file type, currently no loader
     <h4>Install && configure loaders to interpret the jsx</h4>
     <p>here, we'll install some babel loaders && setul a babel configuration file. babel-core is, well, the 'core' module of babel. Babel-Loader  lets webpack 'talk to' babel. babel preset-env deals with 'modern' javascript. Babel preset-react interprets jsx && converts it to js.</p>
     <li>In a terminal install these dependencies by running <code>npm i --save-dev @babel/core @babel/preset-env @babel/preset-react</code></li>
+    <li>create a rile at the root of the project name <code>.babelrc</code>. This where babel will 'know' what modules to use.</li>
+    <li>In the .babelrc file, create an object with a "presets" key, with a value of an array of 2 strings...<br>
+      <code>{ "presets": [ "@babel/preset-env", "@babel/preset-react" ] }</code>
+    </li>
+    <h4>Update the webpack config to use the babel parser on .js files</h4>
+    <li>Create a new key in the export of the webpack config file, a key called "rules", at the same level as the "plugins" key. This "rules" key is where we 'tell' webpack how to interpret files, where we can tell webpack to let make babel interpret js files.</li>
+    <li>In the 'rules' key, set the value to an array.</li>
+    <li>in the 'rules' array, set 1 object as the value of the array. I'll refer to this as the "js rule object".</li>
+    <li>in the js-rule-object, 3 keys will be present: 'test', 'exclude' and 'use'.</li>
+    <li>set the value of the 'test' key to <code>/\.js/</code>. This tells webpack to interpret js files.</li>
+    <li>set the value of the 'exclude' key to <code>/node_modules/</code></li>
+    <li>set the value of the 'use' key as an object. I'll refer to this as the "js-use-object"</li>
+    <li>set 2 keys in the js-use-object: loader && options</li>
+    <li>set the 'loader' key value to 'babel-loader'</li>
+    <li>set the 'options' key value to an object. Set a single key in this object, a 'presets' key. Set the value of this presets key as an array. Set 2 strings as array elements in this presets array: <code>['@babel/react','@babel/env']</code></li>
+    <p>The Rules key in the webpack.config should look like...</p>
+    <pre>
+  rules: [
+    {
+      test: /\.js$/,
+      exclude: /node_modules/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/react', '@babel/env'],
+        },
+      },
+    }
+  ]
+    </pre>
   </section>
 
   <p><a href="./setup-react.html">Connect React && serve a component</a> next -></p>
