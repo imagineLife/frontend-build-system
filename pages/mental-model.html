@@ -1,0 +1,89 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Frontent Build System</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="./../css/normalize.css">
+  <link rel="stylesheet" href="./../css/main.css">
+  <link rel="stylesheet" href="./../css/styles.css">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <header>
+    <h1>Frontend Build System Tooling Overview</h1>
+  </header>
+
+  <figure id="gap">
+    <h2 class="header" id="gap-header">The Gap</h2>
+    <ul>
+      <li>"I don't know what 'tools' are being used when I build a website using react."</li>
+      <li>"I can build a project with create-react-app, and I've heard about webpack, but I don't know whats going between them".</li>
+    </ul>
+  </figure>  
+
+  <figure id="hope">
+    <h2 class="header" id="hope-header">The Hope</h2>
+    <p>"As a developr, I'd like to...
+      <ul>
+        <li>...understand the tooling</li>
+        <li>...be able to articulate the tolls that I'm using</li>
+        <li>...be able to give <i>at least an overview</i> of how these tools are working together</li>
+        <li>...have my own boilerplate project where I've compiled react/webpack/babel etc.</li>
+      </ul>
+      <i>understand and being able to assemble</i> a frontend app using the tools of <a target="_blank" href="https://reactjs.org/">react</a>, <a target="_blank" href="https://webpack.js.org/">webpack</a>, and <a target="_blank" href="https://babeljs.io/">babel</a>, <a target="_blank" href="https://www.npmjs.com/">npm</a> and <a target="_blank" href="https://nodejs.org/en/">node</a>."</p>
+  </figure>
+
+  
+  <figure id="one-liners">
+    <h2 class="header" id="practice-header">The Practice</h2>
+    <h3>Tooling One-Line Explanations</h3>
+    <p>Here are a few 'one-liner's to give an overview of the tooling...</p>
+
+    <section id="react-one-liner">
+      <h4>React</h4>
+      <p><b>A lightweight JavaScript library used for building component-focused UIs <i>almost lifted directly from their website!</i>.</b></p>
+      <p class="sub">React will be used here to build a few components.</p>
+    </section>
+
+    <section id="webpack-one-liner">
+      <h4>Webpack</h4>
+      <p><b>An npm module used to 'compile' or 'bundle' javascript.</i></b></p>
+      <p class="sub">Webpack will be used here for a few things...</p>
+      <ul>
+        <li  class="sub">shrink the javascript size from what is written to a smaller file-size. This gives less code to the browser, which is nice.</li>
+        <li  class="sub">leverage webpack's <a target="_blank" href="https://webpack.js.org/configuration/dev-server/">Dev Server</a> to serve the project, only for development</li>
+      </ul>
+    </section>
+
+    <section id="babel-one-liner">
+      <h4>Babel</h4>
+      <p><b>Babel transforms code to more-readable code for a browser.</b></p>
+      <p class="sub">Babel will be used here to convert our react code to browser-readable code. Browsers don't read our react code.</p>
+    </section>
+
+    <section id="npm-one-liner">
+      <h4>NPM</h4>
+      <p><b>NPM hosts bunches of code <i>('repositories')</i> that are written and 'packaged' up <i>(into 'modules')</i> for folks like us to 'install' and use.</b></p>
+      <p class="sub">NPM will be used here to download a bunch of dependencies from the npm repository ecosystem.</p>
+    </section>
+
+    <section id="node-one-liner">
+      <h4>Node</h4>
+      <p><b>Node lets us JavaScript developers write JavaScript that can run on a server. It's a <a target="_blank" href="https://nodejs.org/en/">"Javascript runtime"</a>.</b></p>
+      <p class="sub">Node will be used here to run http servers. This repo won't write much node-specific code <i>(if any, we'll see)</i>.</p>
+    </section>
+
+  </figure>
+
+  <p><a href="./npm-setup.html">Setup NPM</a> next -></p>
+
+  <script src="./../js/main.js"></script>
+</body>
+
+</html>
